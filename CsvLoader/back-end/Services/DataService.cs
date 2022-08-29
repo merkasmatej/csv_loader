@@ -151,7 +151,7 @@ namespace back_end.Services
 
                 await connection.OpenAsync(cancellationToken);
 
-                int rowsAffected = await command.ExecuteNonQueryAsync(cancellationToken);
+                await command.ExecuteNonQueryAsync(cancellationToken);
 
                 var result = new ExecutionResult()
                 {
