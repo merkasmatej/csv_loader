@@ -17,11 +17,10 @@ CREATE PROCEDURE AddPerson
 AS
 
 IF (
-		( SELECT COUNT(*) 
+		(SELECT COUNT(*) 
 		FROM  [matej_test].[dbo].[Podaci]
-		WHERE [Ime] = @ime
-			AND [Prezime] = @prezime
-		) < 1 )
+		WHERE Telefon = @telefon)
+		 < 1 )
 BEGIN
 
 	BEGIN TRY 
