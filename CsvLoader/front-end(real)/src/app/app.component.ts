@@ -11,8 +11,6 @@ export class AppComponent {
   public data: string[] = [];
   public people?: Person[];
 
-  title = 'front-end';
-
   constructor(
     private httpCLient: HttpClient,
     private toastr: ToastrService
@@ -31,7 +29,6 @@ export class AppComponent {
   }
 
 }
-
 
 interface Person {
   lastName: string;
